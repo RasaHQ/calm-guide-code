@@ -1,0 +1,7 @@
+flows:
+  number_of_contacts:
+    name: number of contacts
+    description: Tell the user their number of contacts
+    if: False
+    steps:
+      - action: utter_number_of_contacts

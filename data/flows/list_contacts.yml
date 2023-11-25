@@ -8,7 +8,7 @@ flows:
           - if: "slots.contacts_list"
             then:
               - action: utter_list_contacts
-                next: END
+              - link: number_of_contacts
           - else:
               - action: utter_no_contacts
                 next: END
