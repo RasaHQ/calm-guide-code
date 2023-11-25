@@ -1,0 +1,19 @@
+flows:
+  send_flowers:
+    name: send flowers
+    description: send flowers to one of your contacts
+    steps:
+      - id: "collect_send_flowers_contact_handle"
+        collect: send_flowers_contact_handle
+      - action: check_contact_handle_is_in_list
+        next:
+          - if: "slots.return_value"
+            then: "send_flowers_type"
+          - else:
+              - action: utter_not_in_your_list
+              - set_slots:
+                  - send_flowers_contact_handle: null
+                next: "collect_send_flowers_contact_handle"
+      - id: "send_flowers_type"
+        collect: send_flowers_type
+      - action: utter_sent_flowers

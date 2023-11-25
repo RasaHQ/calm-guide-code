@@ -1,0 +1,8 @@
+test_cases:
+  - test_case: user tries to send flowers to contact not in list
+    steps:
+      - user: I want to send flowers
+      - utter: utter_ask_send_flowers_contact_handle
+      - user: to @JackBlack
+      - utter: utter_not_in_your_list
+      - utter: utter_ask_send_flowers_contact_handle

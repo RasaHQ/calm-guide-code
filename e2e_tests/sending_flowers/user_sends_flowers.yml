@@ -1,0 +1,13 @@
+test_cases:
+  - test_case: user sends flowers
+    steps:
+      - user: I want to send flowers
+      - utter: utter_ask_send_flowers_contact_handle
+      - user: to @MaryLu
+      - slot_was_set:
+          - send_flowers_contact_handle: "@MaryLu"
+      - utter: utter_ask_send_flowers_type
+      - user: She loves pinks, so those will be best
+      - slot_was_set:
+          - send_flowers_type: pinks
+      - utter: utter_sent_flowers

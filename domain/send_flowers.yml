@@ -1,0 +1,24 @@
+version: "3.1"
+
+actions:
+  - check_contact_handle_is_in_list
+
+slots:
+  send_flowers_contact_handle:
+    type: text
+  send_flowers_type:
+    type: categorical
+    values:
+      - roses
+      - lilies
+      - pinks
+
+responses:
+  utter_ask_send_flowers_contact_handle:
+    - text: "What's the handle of the contact you want to send flowers too?"
+  utter_ask_send_flowers_type:
+    - text: "What type of flowers do you want to send? Roses, lilies or pinks?"
+  utter_sent_flowers:
+    - text: "Alrighty, the flowers will be soon with them!"
+  utter_not_in_your_list:
+    - text: "This contact is not in your list yet."

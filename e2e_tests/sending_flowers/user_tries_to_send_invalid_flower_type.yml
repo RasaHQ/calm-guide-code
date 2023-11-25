@@ -1,0 +1,10 @@
+test_cases:
+  - test_case: user tries to send invalid flower type
+    steps:
+      - user: I want to send flowers
+      - utter: utter_ask_send_flowers_contact_handle
+      - user: to @MaryLu
+      - utter: utter_ask_send_flowers_type
+      - user: daffodils please
+      - utter: utter_categorical_slot_rejection
+      - utter: utter_ask_send_flowers_type
