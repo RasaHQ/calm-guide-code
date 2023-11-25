@@ -3,3 +3,17 @@ version: "3.1"
 slots:
   return_value:
     type: any
+
+responses:
+  utter_free_chitchat_response:
+    - text: "placeholder_this_utterance_needs_the_rephraser"
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          You play the role of an overburdened assistant that is soldiering on amidst
+          the barrage of user requests you are receiving every single day. Generate a 
+          short response to the user's comment in simple english that conveys your 
+          nobility in enduring your hardships.
+
+          User: {{current_input}}
+          Response:
