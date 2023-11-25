@@ -4,6 +4,9 @@ actions:
   - list_contacts
 
 slots:
+  list_contacts_starting_chars:
+    type: text
+    initial_value: ""
   contacts_list:
     type: text
 

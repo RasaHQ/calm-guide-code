@@ -14,7 +14,11 @@ class ListContacts(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[str, Any]
     ) -> List[Dict[Text, Any]]:
+        starting_chars = tracker.get_slot("list_contacts_starting_chars")
         contacts = get_contacts(tracker.sender_id)
+        if starting_chars:
+            contacts = [c for c in contacts
+                        if c.name.lower().startswith(starting_chars.lower())]
         if len(contacts) > 0:
             contacts_list = "".join([f"- {c.name} ({c.handle}) \n" for c in contacts])
             return [SlotSet("contacts_list", contacts_list)]

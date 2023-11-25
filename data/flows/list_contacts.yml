@@ -3,6 +3,8 @@ flows:
     name: list your contacts
     description: show your contact list
     steps:
+      - collect: list_contacts_starting_chars
+        description: "Optional starting characters to filter the contacts"
       - action: list_contacts
         next:
           - if: "slots.contacts_list"

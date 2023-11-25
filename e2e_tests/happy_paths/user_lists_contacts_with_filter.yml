@@ -1,0 +1,7 @@
+test_cases:
+  - test_case: user lists their contacts with filter
+    steps:
+      - user: Please show me my contacts that start with the letter J
+      - slot_was_set:
+          - contacts_list: "- Joe (@JoeMyers) \n"
+      - utter: utter_list_contacts
