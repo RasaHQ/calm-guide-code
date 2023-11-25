@@ -15,6 +15,10 @@ test_cases:
       - user: It's Barbar
       - slot_was_set:
           - add_contact_name: "Barbar"
+      - utter: utter_ask_add_contact_email
+      - user: it's foo@bar.com
+      - slot_was_set:
+          - add_contact_email: "foo@bar.com"
       - utter: utter_ask_add_contact_confirmation
       - user: "Yes"
       - utter: utter_contact_added

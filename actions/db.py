@@ -15,7 +15,7 @@ CONTACTS = "contacts.json"
 class Contact(BaseModel):
     name: str
     handle: str
-
+    email: str
 
 def get_session_db_path(session_id: str) -> str:
     tempdir = tempfile.gettempdir()

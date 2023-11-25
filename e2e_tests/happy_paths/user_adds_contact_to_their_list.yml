@@ -10,6 +10,8 @@ test_cases:
       - user: just Bart
       - slot_was_set:
           - add_contact_name: Bart
+      - utter: utter_ask_add_contact_email
+      - user: It's barts@gmail.com
       - utter: utter_ask_add_contact_confirmation
       - user: "Yes"
       - utter: utter_contact_added

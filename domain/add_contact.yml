@@ -10,6 +10,8 @@ slots:
     type: text
   add_contact_handle:
     type: text
+  add_contact_email:
+    type: text
 
 responses:
   utter_ask_add_contact_confirmation:
@@ -31,3 +33,5 @@ responses:
     - text: "There's already a contact with that handle in your list."
   utter_contact_added:
     - text: "Contact added successfully."
+  utter_ask_add_contact_email:
+    - text: What's the email of the user you want to add?

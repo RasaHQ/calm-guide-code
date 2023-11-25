@@ -1,10 +1,12 @@
 [
   {
     "name": "Joe",
-    "handle": "@JoeMyers"
+    "handle": "@JoeMyers",
+    "email": "joe.myers.example@rasa.com"
   },
   {
     "name": "Mary",
-    "handle": "@MaryLu"
+    "handle": "@MaryLu",
+    "email": "mary.lu.example@rasa.com"
   }
 ]

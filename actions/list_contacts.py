@@ -16,7 +16,8 @@ class ListContacts(Action):
     ) -> List[Dict[Text, Any]]:
         contacts = get_contacts(tracker.sender_id)
         if len(contacts) > 0:
-            contacts_list = "".join([f"- {c.name} ({c.handle}) \n" for c in contacts])
+            contacts_list = "".join([f"- {c.name} ({c.handle}) ({c.email}) \n"
+                                    for c in contacts])
             return [SlotSet("contacts_list", contacts_list)]
         else:
             return [SlotSet("contacts_list", None)]

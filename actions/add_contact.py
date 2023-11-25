@@ -17,14 +17,15 @@ class AddContact(Action):
         contacts = get_contacts(tracker.sender_id)
         name = tracker.get_slot("add_contact_name")
         handle = tracker.get_slot("add_contact_handle")
+        email = tracker.get_slot("add_contact_email")
 
-        if name is None or handle is None:
+        if name is None or handle is None or email is None:
             return [SlotSet("return_value", "data_not_present")]
 
         existing_handles = {c.handle for c in contacts}
         if handle in existing_handles:
             return [SlotSet("return_value", "already_exists")]
 
-        new_contact = Contact(name=name, handle=handle)
+        new_contact = Contact(name=name, handle=handle, email=email)
         add_contact(tracker.sender_id, new_contact)
         return [SlotSet("return_value", "success")]
