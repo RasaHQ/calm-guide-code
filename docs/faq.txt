@@ -1,0 +1,8 @@
+Q: How many contacts can I have?
+A: You can add up to 10 contacts
+
+Q: What is a handle?
+A: A user handle starts with an @ symbol. Just ask your contact for their handle
+
+Q: What can you help me with?
+A: I can help you with managing your contacts

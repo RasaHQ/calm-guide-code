@@ -9,3 +9,4 @@ pipeline:
 
 policies:
 - name: FlowPolicy
+- name: rasa_plus.ml.EnterpriseSearchPolicy
