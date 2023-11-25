@@ -3,9 +3,9 @@ test_cases:
     steps:
       - user: I want to add someone to my contact list
       - utter: utter_ask_add_contact_handle
-      - user: it's @barts
+      - user: it's @Barts
       - slot_was_set:
-          - add_contact_handle: "@barts"
+          - add_contact_handle: "@Barts"
       - utter: utter_ask_add_contact_name
       - user: just Bart
       - slot_was_set:

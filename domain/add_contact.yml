@@ -2,6 +2,7 @@ version: "3.1"
 
 actions:
   - add_contact
+  - check_handle_existence
 
 slots:
   add_contact_confirmation:
@@ -31,3 +32,7 @@ responses:
     - text: "There's already a contact with that handle in your list."
   utter_contact_added:
     - text: "Contact added successfully."
+  utter_add_contact_handle_start_at_symbol:
+    - text: "The contact handle needs to start with an @ symbol."
+  utter_add_contact_handle_does_not_exist:
+    - text: "It looks like the handle {add_contact_handle} does not exist, sorry."

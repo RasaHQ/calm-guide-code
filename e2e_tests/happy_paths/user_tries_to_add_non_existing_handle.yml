@@ -1,0 +1,8 @@
+test_cases:
+  - test_case: user tries to add non-existing handle
+    steps:
+      - user: I want to add someone to my contact list
+      - utter: utter_ask_add_contact_handle
+      - user: it's @CharlesIVPrague
+      - utter: utter_add_contact_handle_does_not_exist
+      - utter: utter_ask_add_contact_handle
