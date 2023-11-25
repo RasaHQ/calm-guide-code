@@ -1,0 +1,11 @@
+version: "3.1"
+
+slots:
+  correction_confirmation:
+    type: bool
+
+responses:
+  utter_ask_correction_confirmation:
+    - text: "Do you want to update your previous information?"
+  utter_cancelled_correction:
+    - text: "Okay, cancelled the correction."

@@ -1,0 +1,21 @@
+flows:
+  pattern_correction:
+    description: Handle a correction of a slot value.
+    name: pattern correction
+    steps:
+      - collect: correction_confirmation
+        ask_before_filling: True
+        next:
+          - if: slots.correction_confirmation
+            then: execute_correction
+          - else:
+              - action: utter_cancelled_correction
+                next: END
+      - id: "execute_correction"
+        action: action_correct_flow_slot
+        next:
+          - if: not context.is_reset_only
+            then:
+              - action: utter_corrected_previous_input
+                next: "END"
+          - else: "END"

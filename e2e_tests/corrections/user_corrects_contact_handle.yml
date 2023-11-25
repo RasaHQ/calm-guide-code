@@ -8,6 +8,8 @@ test_cases:
           - add_contact_handle: "@foo"
       - utter: utter_ask_add_contact_name
       - user: Wait, no, the handle is @bar
+      - utter: utter_ask_correction_confirmation
+      - user: "yes"
       - slot_was_set:
           - add_contact_handle: "@bar"
       - utter: utter_corrected_previous_input
