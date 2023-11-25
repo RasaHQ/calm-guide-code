@@ -1,6 +1,12 @@
 recipe: default.v1
 language: en
 pipeline:
+- name: WhitespaceTokenizer
+- name: LanguageModelFeaturizer
+  model_name: bert
+  model_weights: sentence-transformers/all-MiniLM-L6-v2
+- name: LogisticRegressionClassifier
+- name: NLUCommandAdapter
 - name: LLMCommandGenerator
   llm:
     model_name: gpt-4

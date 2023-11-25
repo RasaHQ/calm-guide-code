@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: add_contact
+  examples: |
+    - add
+    - add contact
+    - please add a contact 
+
+- intent: remove_contact
+  examples: |
+    - remove
+    - removal
+    - remove contact
+    - please remove a contact
