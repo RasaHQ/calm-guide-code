@@ -13,3 +13,4 @@ test_cases:
       - utter: utter_ask_add_contact_confirmation
       - user: "Yes"
       - utter: utter_contact_added
+      - utter: utter_list_contacts

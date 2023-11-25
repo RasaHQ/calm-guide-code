@@ -19,7 +19,7 @@ flows:
           - if: "slots.return_value == 'success'"
             then:
               - action: utter_remove_contact_success
-                next: END
+              - link: list_contacts
           - if: "slots.return_value == 'not_found'"
             then:
               - action: utter_contact_not_in_list

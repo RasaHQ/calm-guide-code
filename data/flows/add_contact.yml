@@ -21,7 +21,7 @@ flows:
           - if: "slots.return_value = 'success'"
             then:
               - action: utter_contact_added
-                next: END
+              - link: list_contacts
           - if: "slots.return_value = 'already_exists'"
             then:
               - action: utter_contact_already_exists

@@ -10,3 +10,4 @@ test_cases:
       - utter: utter_ask_remove_contact_confirmation
       - user: "yes"
       - utter: utter_remove_contact_success
+      - utter: utter_list_contacts
