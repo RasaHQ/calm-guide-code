@@ -16,9 +16,9 @@ responses:
     - text: Do you want to add {add_contact_name}({add_contact_handle}) to your contacts?
       buttons:
         - payload: "yes"
-          title: Yes
+          title: "Yes"
         - payload: "no"
-          title: No, cancel
+          title: "No, cancel"
   utter_ask_add_contact_handle:
     - text: What's the handle of the user you want to add?
   utter_ask_add_contact_name:

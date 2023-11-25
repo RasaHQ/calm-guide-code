@@ -16,5 +16,5 @@ test_cases:
       - slot_was_set:
           - add_contact_name: "Barbar"
       - utter: utter_ask_add_contact_confirmation
-      - user: Yes
+      - user: "Yes"
       - utter: utter_contact_added
