@@ -1,0 +1,11 @@
+version: "3.1"
+
+slots:
+  cancel_flow_confirmation:
+    type: bool
+
+responses:
+  utter_ask_cancel_flow_confirmation:
+    - text: "Do you want to cancel the current flow?"
+  utter_staying_with_current_flow:
+    - text: "Okay staying with the current flow."

@@ -1,0 +1,16 @@
+flows:
+  pattern_cancel_flow:
+    description: A meta flow that's started when a flow is cancelled.
+    name: pattern_cancel_flow
+    steps:
+      - collect: cancel_flow_confirmation
+        description: if this flow slot is asked never use the Action CancelFlow but fill this slot instead
+        next:
+          - if: slots.cancel_flow_confirmation
+            then: execute_cancellation
+          - else:
+              - action: utter_staying_with_current_flow
+                next: END
+      - id: execute_cancellation
+        action: action_cancel_flow
+      - action: utter_flow_cancelled_rasa

@@ -1,9 +1,9 @@
 test_cases:
-  - test_case: user changes mind based on new info
+  - test_case: user cancels cancellation
     steps:
       - user: I want to add contact
       - utter: utter_ask_add_contact_handle
       - user: Stop
       - utter: utter_ask_cancel_flow_confirmation
-      - user: "yes"
-      - utter: utter_flow_cancelled_rasa
+      - user: "no"
+      - utter: utter_staying_with_current_flow
